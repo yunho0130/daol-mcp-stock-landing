@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>다올투자증권 | MCP 실시간 주식 시세 시스템</title>
+  <meta name="description" content="MCP를 통해 주식 시세, 환율, 투자상품 안내를 안전하게 연결하는 다올투자증권 컨셉 랜딩페이지" />
+  <meta property="og:title" content="다올투자증권 MCP 실시간 주식 시세 시스템" />
+  <meta property="og:description" content="AI 에이전트와 금융 데이터 소스를 MCP로 연결해 삼성전자 시세와 환율을 한 화면에 표시합니다." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue:#0052ff; --blue-2:#578bfa; --ink:#080b12; --muted:#5b6474; --line:rgba(91,97,110,.22);
+      --surface:#f5f7fb; --card:#fff; --dark:#0a0b0d; --dark-card:#171a21; --green:#12b981; --red:#ef4444;
+      --shadow:0 24px 80px rgba(7, 20, 54, .10);
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:'DM Sans','Noto Sans KR',system-ui,sans-serif;color:var(--ink);background:#fff;letter-spacing:-.02em}
+    a{color:inherit;text-decoration:none} .container{width:min(1160px,calc(100% - 40px));margin:0 auto}
+    .nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.86);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    .nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800} .mark{width:36px;height:36px;border-radius:50%;background:var(--blue);display:grid;place-items:center;color:white;font-weight:800}
+    .nav-links{display:flex;gap:22px;color:var(--muted);font-size:14px;font-weight:600} .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:0 22px;border-radius:999px;font-weight:700;border:1px solid transparent;transition:.18s ease}
+    .btn.primary{background:var(--blue);color:#fff} .btn.primary:hover{background:var(--blue-2);transform:translateY(-1px)} .btn.secondary{background:#eef0f3;color:#10131a} .btn.secondary:hover{background:#e3e8f2}
+    .hero{padding:86px 0 76px;overflow:hidden;background:radial-gradient(circle at 78% 8%, rgba(0,82,255,.14), transparent 32%),linear-gradient(180deg,#fff 0%,#f7f9ff 100%)}
+    .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:56px;align-items:center} .eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 13px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--blue);font-weight:800;font-size:13px}
+    h1{font-size:clamp(46px,7vw,82px);line-height:.98;margin:24px 0 22px;letter-spacing:-.065em;font-weight:700} .lead{font-family:'Noto Sans KR',sans-serif;font-size:20px;line-height:1.72;color:#3b4454;margin:0 0 30px;max-width:670px}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap} .fineprint{margin-top:18px;color:#7a8494;font-size:13px}
+    .terminal-card{background:var(--dark);border-radius:36px;padding:20px;box-shadow:var(--shadow);color:white;border:1px solid #252a36;position:relative}
+    .terminal-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;color:#9aa4b5;font-size:13px} .dots{display:flex;gap:7px} .dots span{width:10px;height:10px;border-radius:50%;background:#333} .dots span:nth-child(1){background:#ff5f57} .dots span:nth-child(2){background:#febc2e} .dots span:nth-child(3){background:#28c840}
+    .quote{background:linear-gradient(180deg,#171b26,#0f1219);border:1px solid #2b3140;border-radius:24px;padding:22px} .quote h3{margin:0 0 6px;font-size:28px} .quote .price{font-size:54px;line-height:1;font-weight:800;letter-spacing:-.055em;margin:16px 0 8px} .up{color:#ff5b68} .muted{color:#8d98aa}
+    .metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:18px} .metric{padding:14px;border-radius:16px;background:#202530;border:1px solid #303746} .metric small{display:block;color:#8d98aa;margin-bottom:6px} .metric strong{font-size:18px}
+    .code{margin-top:14px;border-radius:20px;background:#05070b;border:1px solid #2a3040;padding:16px;overflow:auto;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;line-height:1.7;color:#c8d3e6}
+    section{padding:84px 0} .section-head{max-width:760px;margin-bottom:36px} .kicker{color:var(--blue);font-weight:800;font-size:14px;letter-spacing:.02em;text-transform:uppercase} h2{font-size:clamp(34px,4.6vw,58px);line-height:1.04;letter-spacing:-.055em;margin:10px 0 14px} .desc{font-family:'Noto Sans KR';font-size:18px;line-height:1.75;color:#4b5567;margin:0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px} .card{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:28px;box-shadow:0 10px 40px rgba(9,18,38,.05)} .card .num{width:36px;height:36px;border-radius:50%;background:#eef3ff;color:var(--blue);display:grid;place-items:center;font-weight:800;margin-bottom:26px} .card h3{font-size:23px;margin:0 0 10px} .card p{font-family:'Noto Sans KR';color:#596477;line-height:1.68;margin:0}
+    .dark{background:var(--dark);color:white} .dark .desc{color:#b6bfcc} .architecture{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch} .panel{background:var(--dark-card);border:1px solid #2a3040;border-radius:30px;padding:30px}
+    .flow{display:grid;gap:12px} .flow-row{display:grid;grid-template-columns:140px 1fr;gap:16px;align-items:center;padding:16px;border-radius:18px;background:#10141d;border:1px solid #252c3b} .tag{font-family:ui-monospace,monospace;color:#79a7ff;font-size:13px} .flow-row strong{display:block;margin-bottom:4px} .flow-row span{color:#aab5c6;font-family:'Noto Sans KR';line-height:1.55}
+    .product{background:linear-gradient(135deg,#eef3ff,#fff 46%,#f4f7fb);border:1px solid var(--line);border-radius:40px;padding:42px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center} .product h2{margin:0 0 12px} .product p{font-family:'Noto Sans KR';color:#4b5567;font-size:18px;line-height:1.7;margin:0;max-width:690px}
+    .footer{padding:34px 0;color:#737d8f;border-top:1px solid var(--line);font-size:13px}
+    @media(max-width:900px){.hero-grid,.architecture,.product{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.nav-links{display:none}.quote .price{font-size:42px}section{padding:62px 0}}
+  </style>
+</head>
+<body>
+  <nav class="nav"><div class="container nav-inner"><a class="brand" href="#top"><span class="mark">D</span><span>다올투자증권 MCP Market Data</span></a><div class="nav-links"><a href="#mcp">MCP 원리</a><a href="#quote">시세 예시</a><a href="#product">관련 상품</a></div><a class="btn primary" href="https://www.daolsecurities.com/index.html" target="_blank" rel="noopener noreferrer">다올투자증권 바로가기 ↗</a></div></nav>
+  <main id="top">
+    <header class="hero"><div class="container hero-grid"><div><span class="eyebrow">Model Context Protocol × Market Data</span><h1>AI 에이전트가 주식 시세를 안전하게 불러오는 방식</h1><p class="lead">MCP는 AI 모델이 증권 시세, 환율, 포트폴리오 시스템 같은 외부 도구를 표준 인터페이스로 호출하게 해주는 연결 규격입니다. 다올투자증권 컨셉 페이지는 이 구조를 활용해 실시간형 시세 조회와 투자상품 안내까지 하나의 경험으로 묶어 보여줍니다.</p><div class="cta-row"><a class="btn primary" href="#quote">삼성전자 예시 보기</a><a class="btn secondary" href="#mcp">MCP 작동 원리</a></div><p class="fineprint">※ 본 페이지는 시스템 소개용 랜딩페이지이며 투자 권유 또는 매수·매도 추천이 아닙니다.</p></div>
+      <aside class="terminal-card" id="quote"><div class="terminal-top"><div class="dots"><span></span><span></span><span></span></div><span>mcp.market.quote / realtime</span></div><div class="quote"><div class="muted">KOSPI · 005930.KS · ISIN KR7005930003</div><h3>삼성전자</h3><div class="price">346,500원</div><div class="up">+3,500원 (+1.02%)</div><div class="metrics"><div class="metric"><small>시가 / 고가</small><strong>332,000원 · 348,000원</strong></div><div class="metric"><small>거래량</small><strong>17,955,897주</strong></div><div class="metric"><small>USD/KRW 환율</small><strong>1,361.42원</strong></div><div class="metric"><small>시가총액</small><strong>2,025조 7,355억 원</strong></div></div></div><pre class="code">{
+  "tool": "mcp.market.quote",
+  "arguments": { "symbol": "KRX:005930", "fx": "USD/KRW" },
+  "result": { "price": 346500, "currency": "KRW", "fx_usd_krw": 1361.42 }
+}</pre><p class="fineprint">시세 기준: 2026-06-17 15:30 KST · 환율 기준: 2026-06-17 00:02 UTC</p></aside></div></header>
+    <section id="mcp"><div class="container"><div class="section-head"><span class="kicker">How MCP Works</span><h2>MCP는 AI와 금융 데이터 사이의 표준 커넥터입니다</h2><p class="desc">모델이 임의로 웹을 긁는 대신, 허가된 MCP 서버가 데이터 소스와 인증, 호출 스키마, 응답 형식을 책임집니다. AI는 필요한 시점에 도구를 호출하고, 사용자는 출처와 시점을 확인할 수 있습니다.</p></div><div class="cards"><article class="card"><div class="num">1</div><h3>도구 선언</h3><p>MCP 서버가 `주식 시세 조회`, `환율 조회`, `상품 링크 조회` 같은 기능을 JSON 스키마로 공개합니다.</p></article><article class="card"><div class="num">2</div><h3>컨텍스트 호출</h3><p>AI 에이전트는 질문 맥락에 맞춰 필요한 도구만 호출하고, 티커·종목코드·통화 같은 인자를 명확히 전달합니다.</p></article><article class="card"><div class="num">3</div><h3>검증 가능한 응답</h3><p>응답에는 가격, 기준시각, 출처, 지연 여부를 포함해 사용자가 데이터 신뢰도를 판단할 수 있게 합니다.</p></article></div></div></section>
+    <section class="dark"><div class="container architecture"><div class="section-head"><span class="kicker">System Overview</span><h2>증권 서비스에 맞춘 MCP 시세 파이프라인</h2><p class="desc">프론트엔드는 AI 에이전트와 대화형 UI를 제공하고, MCP 서버는 금융 API 접근 권한과 호출 제한을 관리합니다. 민감 정보는 모델이 아니라 서버 사이드 경계에서 다룹니다.</p></div><div class="panel flow"><div class="flow-row"><div class="tag">Client</div><div><strong>사용자 질의</strong><span>“삼성전자 현재가와 달러 환산 가격 보여줘”</span></div></div><div class="flow-row"><div class="tag">AI Agent</div><div><strong>도구 선택</strong><span>종목코드 005930, KOSPI, USD/KRW 환율 조회 필요성을 판단</span></div></div><div class="flow-row"><div class="tag">MCP Server</div><div><strong>권한 있는 호출</strong><span>시세 API와 환율 API를 표준 응답으로 정규화</span></div></div><div class="flow-row"><div class="tag">Landing UI</div><div><strong>설명 가능한 표시</strong><span>가격, 기준시각, 출처, 투자 유의문구를 함께 렌더링</span></div></div></div></div></section>
+    <section id="product"><div class="container"><div class="product"><div><span class="kicker">Related Products</span><h2>관련 상품은 다올투자증권에서 확인하세요</h2><p>비대면 계좌개설, 국내주식, 투자정보, 금융상품 등 자세한 서비스는 다올투자증권 공식 홈페이지에서 확인할 수 있습니다. 버튼은 외부 사이트를 새 창으로 엽니다.</p></div><a class="btn primary" href="https://www.daolsecurities.com/index.html" target="_blank" rel="noopener noreferrer">다올투자증권 상품 보기 ↗</a></div></div></section>
+  </main>
+  <footer class="footer"><div class="container">데이터 출처: Naver Finance polling API / open.er-api.com · 예시 목적의 랜딩페이지 · 투자 조언 아님</div></footer>
+</body>
+</html>
